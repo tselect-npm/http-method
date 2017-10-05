@@ -1,0 +1,31 @@
+{
+  "name": "@bluejay/http-method",
+  "version": "1.0.0",
+  "description": "HTTP methods related enums and utilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require ./node_modules/ts-node/register --require ./test/setup test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluebirds-blue-jay/http-method.git"
+  },
+  "author": "Sylvain Estevez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bluebirds-blue-jay/http-method/issues"
+  },
+  "homepage": "https://github.com/bluebirds-blue-jay/http-method#readme",
+  "dependencies": {
+    "@types/lodash": "^4.14.77",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.0",
+    "ts-node": "^3.3.0",
+    "typedoc": "^0.8.0"
+  }
+}
