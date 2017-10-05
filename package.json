@@ -4,7 +4,8 @@
   "description": "HTTP methods related enums and utilities.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ./node_modules/ts-node/register --require ./test/setup test/**/*.test.js"
+    "test": "mocha --require ./node_modules/ts-node/register --require ./test/setup test/**/*.test.js",
+    "docs": "./node_modules/.bin/typedoc --out docs --mode file --excludeExternals --excludePrivate ./index.ts"
   },
   "repository": {
     "type": "git",
