@@ -1,1 +1,1 @@
-export * from './http-method';
+export { THTTPMethod } from './http-method';

@@ -1,6 +1,9 @@
-export const GET = 'get';
-export const POST = 'post';
-export const PATCH = 'patch';
-export const DELETE = 'delete';
-export const HEAD = 'head';
-export const OPTIONS = 'options';
+export enum HTTPMethod {
+  GET = 'get',
+  POST = 'post',
+  PATCH = 'patch',
+  DELETE = 'delete',
+  HEAD = 'head',
+  OPTIONS = 'options',
+  PUT = 'put'
+}

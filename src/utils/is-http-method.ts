@@ -1,5 +1,5 @@
-import { map } from '../misc/map';
+import { HTTPMethod } from '../constants/http-method';
 
 export function isHTTPMethod(candidate: string): boolean {
-  return map.has(candidate.toLowerCase());
+  return Object.values(HTTPMethod).includes(candidate.toLowerCase());
 }

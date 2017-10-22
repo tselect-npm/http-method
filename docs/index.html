@@ -71,21 +71,10 @@
 				<h2 id="installation">Installation</h2>
 				<p><code>npm i @bluejay/http-method [--save]</code></p>
 				<h2 id="usage">Usage</h2>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> HTTPMethod <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/http-method'</span>;
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { HTTPMethod, isHTTPMethod } <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/http-method'</span>;
 
 HTTPMethod.GET; <span class="hljs-comment">// get</span>
-HTTPMethod.isHTTPMethod(HTTPMethod.GET); <span class="hljs-comment">// true</span>
-</code></pre>
-				<p>Using the named export.</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { HTTPMethod } <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/http-method'</span>;
-
-HTTPMethod.GET; <span class="hljs-comment">// get</span>
-HTTPMethod.isHTTPMethod(HTTPMethod.GET); <span class="hljs-comment">// true</span>
-</code></pre>
-				<p>Or directly.</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { GET, isHTTPMethod } <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/http-method'</span>;
-
-isHTTPMethod(GET); <span class="hljs-comment">// true</span>
+isHTTPMethod(HTTPMethod.GET); <span class="hljs-comment">// true</span>
 </code></pre>
 				<h2 id="documentation">Documentation</h2>
 				<p>See <a href="https://bluebirds-blue-jay.github.io/http-method/">Github Pages</a>.</p>
@@ -101,26 +90,11 @@ isHTTPMethod(GET); <span class="hljs-comment">// true</span>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/httpmethod.html" class="tsd-kind-icon">HTTPMethod</a>
+					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#thttpmethod" class="tsd-kind-icon">THTTPMethod</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#delete" class="tsd-kind-icon">DELETE</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#get" class="tsd-kind-icon">GET</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#head" class="tsd-kind-icon">HEAD</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#options" class="tsd-kind-icon">OPTIONS</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#patch" class="tsd-kind-icon">PATCH</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#post" class="tsd-kind-icon">POST</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#ishttpmethod" class="tsd-kind-icon">isHTTPMethod</a>

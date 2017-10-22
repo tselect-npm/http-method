@@ -12,27 +12,10 @@
 ## Usage
 
 ```typescript
-import * as HTTPMethod from '@bluejay/http-method';
+import { HTTPMethod, isHTTPMethod } from '@bluejay/http-method';
 
 HTTPMethod.GET; // get
-HTTPMethod.isHTTPMethod(HTTPMethod.GET); // true
-```
-
-Using the named export.
-
-```typescript
-import { HTTPMethod } from '@bluejay/http-method';
-
-HTTPMethod.GET; // get
-HTTPMethod.isHTTPMethod(HTTPMethod.GET); // true
-```
-
-Or directly.
-
-```typescript
-import { GET, isHTTPMethod } from '@bluejay/http-method';
-
-isHTTPMethod(GET); // true
+isHTTPMethod(HTTPMethod.GET); // true
 ```
 
 ## Documentation
