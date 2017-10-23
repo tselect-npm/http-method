@@ -13,8 +13,6 @@
     "types": ["node", "mocha"]
   },
   "exclude": [
-    "node_modules",
-    "lib",
-    "./src/misc"
+    "node_modules"
   ]
 }
