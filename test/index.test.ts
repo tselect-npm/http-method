@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import * as HTTPMethodUtils from '../';
 
 describe('HTTPMethod', function () {
