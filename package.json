@@ -1,6 +1,6 @@
 {
   "name": "@bluejay/http-method",
-  "version": "2.0.2",
+  "version": "3.0.0-beta.0",
   "description": "HTTP methods related enums and utilities.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
