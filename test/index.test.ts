@@ -1,4 +1,5 @@
-import * as HTTPMethodUtils from '../';
+import { expect } from 'chai';
+import * as HTTPMethodUtils from '../src';
 
 describe('HTTPMethod', function () {
   describe('.isHTTPMethod()', function () {
