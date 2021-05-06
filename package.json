@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/bluebirds-blue-jay/http-method#readme",
   "dependencies": {
-    "lodash": "4.17.20"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
