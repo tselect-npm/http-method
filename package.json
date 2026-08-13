@@ -59,6 +59,9 @@
     "url": "https://github.com/tselect-npm/http-method/issues"
   },
   "homepage": "https://github.com/tselect-npm/http-method#readme",
+  "engines": {
+    "node": ">=22"
+  },
   "packageManager": "pnpm@11.21.0",
   "devDependencies": {
     "@biomejs/biome": "^2.5.8",
