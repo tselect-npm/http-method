@@ -1,2 +1,15 @@
-export type THTTPMethod = 'get' | 'post' | 'patch' | 'options' | 'delete' | 'head' |
-  'GET' | 'POST' | 'PATCH' | 'OPTIONS' | 'DELETE' | 'HEAD';
+export type THTTPMethod =
+  | 'get'
+  | 'post'
+  | 'patch'
+  | 'options'
+  | 'delete'
+  | 'head'
+  | 'put'
+  | 'GET'
+  | 'POST'
+  | 'PATCH'
+  | 'OPTIONS'
+  | 'DELETE'
+  | 'HEAD'
+  | 'PUT';

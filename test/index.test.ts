@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import * as HTTPMethodUtils from '../src';
+import type { THTTPMethod } from '../src';
+
+// Compile-time guard. THTTPMethod once omitted 'put' while HTTPMethod.PUT
+// existed, so toLowerCase(HTTPMethod.PUT) did not typecheck. This fails the
+// build if a member is ever added to the enum without widening the union.
+const _everyEnumMemberIsInTheUnion: THTTPMethod = {} as HTTPMethodUtils.HTTPMethod;
+void _everyEnumMemberIsInTheUnion;
 
 describe('HTTPMethod', () => {
   describe('.isHTTPMethod()', () => {
@@ -15,15 +22,26 @@ describe('HTTPMethod', () => {
     it('should return false for an invalid method', () => {
       expect(HTTPMethodUtils.isHTTPMethod('foo')).toBe(false);
     });
+    it.each(Object.values(HTTPMethodUtils.HTTPMethod))('should return true for the enum member %s', (method) => {
+      expect(HTTPMethodUtils.isHTTPMethod(method)).toBe(true);
+    });
   });
   describe('.toLowerCase()', () => {
     it('should return a lower case version of the method', () => {
       expect(HTTPMethodUtils.toLowerCase('GET')).toBe('get');
     });
+    it('should accept put, which the type once omitted', () => {
+      expect(HTTPMethodUtils.toLowerCase('PUT')).toBe('put');
+      expect(HTTPMethodUtils.toLowerCase(HTTPMethodUtils.HTTPMethod.PUT)).toBe('put');
+    });
   });
   describe('.toConstantCase()', () => {
     it('should return a constant case version of the method', () => {
       expect(HTTPMethodUtils.toConstantCase('get')).toBe('GET');
+    });
+    it('should accept put, which the type once omitted', () => {
+      expect(HTTPMethodUtils.toConstantCase('put')).toBe('PUT');
+      expect(HTTPMethodUtils.toConstantCase(HTTPMethodUtils.HTTPMethod.PUT)).toBe('PUT');
     });
   });
   describe('.toPascalCase()', () => {
@@ -41,6 +59,7 @@ describe('HTTPMethod', () => {
       ['options', 'Options'],
       ['delete', 'Delete'],
       ['head', 'Head'],
+      ['put', 'Put'],
     ] as const)('should pascal case the lower case method %s', (input, expected) => {
       expect(HTTPMethodUtils.toPascalCase(input)).toBe(expected);
     });
@@ -52,6 +71,7 @@ describe('HTTPMethod', () => {
       ['OPTIONS', 'Options'],
       ['DELETE', 'Delete'],
       ['HEAD', 'Head'],
+      ['PUT', 'Put'],
     ] as const)('should lower the tail of the constant case method %s', (input, expected) => {
       expect(HTTPMethodUtils.toPascalCase(input)).toBe(expected);
     });
