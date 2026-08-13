@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import * as HTTPMethodUtils from '../src';
 import type { THTTPMethod } from '../src';
+import * as HTTPMethodUtils from '../src';
 
 // Compile-time guard. THTTPMethod once omitted 'put' while HTTPMethod.PUT
 // existed, so toLowerCase(HTTPMethod.PUT) did not typecheck. This fails the
