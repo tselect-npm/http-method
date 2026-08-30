@@ -1,6 +1,5 @@
-import * as Lodash from 'lodash';
-import { THTTPMethod } from '../types/http-method';
+import type { THTTPMethod } from '../types/http-method';
 
 export function toPascalCase(method: THTTPMethod): string {
-  return Lodash.capitalize(method);
+  return method.charAt(0).toUpperCase() + method.slice(1).toLowerCase();
 }

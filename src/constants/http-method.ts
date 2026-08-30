@@ -5,5 +5,5 @@ export enum HTTPMethod {
   DELETE = 'delete',
   HEAD = 'head',
   OPTIONS = 'options',
-  PUT = 'put'
+  PUT = 'put',
 }
